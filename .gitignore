@@ -1,0 +1,29 @@
+# mac junk
+*.DS_Store
+
+# visual studio code junk
+.vscode/
+
+# emacs backups
+*~
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Enviroment 
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test stuff
+/private_testing
+
+# logs
+*.log
+
+# Distribution
+*.egg-info/
+*.egg
