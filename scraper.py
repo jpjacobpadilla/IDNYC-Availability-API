@@ -74,3 +74,9 @@ class IDNYCScraper:
             raise Exception(response.status_code)
 
         return response.json()
+    
+    @staticmethod
+    def check_if_there_is_availability(response: dict[str, Any]) -> bool:
+        no_slots = "{'$id': '1', 'responseStatusDto': {'$id': '2', 'type': 1, 'errors': {'$id': '3', '$values': []}}, 'responseDataDto': {'$id': '4', 'data': {'$id': '5', '$values': []}}}"
+
+        return response != no_slots
