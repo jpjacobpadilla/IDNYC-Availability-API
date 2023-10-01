@@ -7,6 +7,9 @@ from scraper import IDNYCScraper
 
 async def main():
     client = IDNYCScraper()
+
+    print('Starting...')
+
     await client.set_user_token()
     await asyncio.sleep(4)
     
