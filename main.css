@@ -40,7 +40,7 @@ table {
     border-radius: calc(var(--nav-border-radius) * 1.5);
     overflow: hidden; 
     background-color: var(--light-color);
-    width: 50%;
+    width: clamp(250px, 50%, 650px);
     border-collapse: collapse;
     box-shadow: 0 0 14px 6px rgba(0, 0, 0, 0.1);
 }
