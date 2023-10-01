@@ -42,7 +42,7 @@ class IDNYCScraper:
         data = response.json()
         self.user_token = data['userToken']
 
-    async def fetch_data(self, start_time, locations, boroughs, date) -> dict[str, Any]:
+    async def fetch_data(self, start_time: str, locations: list[str], boroughs: list[str], date: str) -> dict[str, Any]:
         assert self.user_token, 'User token is not set.'
 
         # Define headers
