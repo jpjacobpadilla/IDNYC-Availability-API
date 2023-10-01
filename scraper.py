@@ -59,10 +59,10 @@ class IDNYCScraper:
         }
 
         data = {
-            'startDate': '10/20/2023',
-            'startTime': 'Evening',
-            'boroughs': ['3', '2', '4', '5', '1'],
-            'enrollmentCenters': ['3201', '3298', '3297', '3300', '3150', '3253', '3289', '3293']
+            'startDate': date,
+            'startTime': start_time,
+            'boroughs': boroughs,
+            'enrollmentCenters': locations 
         }
 
         url = 'https://a069-idnyconlineportal.nyc.gov/IOPWebServices/api/AppointmentApi/GetAvailableTimeSlots' 
