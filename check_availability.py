@@ -32,11 +32,9 @@ async def main():
 
         string_date = str(current_date)
         one_day = await asyncio.gather(
-            *[
-                client.fetch_data('Morning', all_locations, all_boroughs, string_date),
-                client.fetch_data('Afternoon', all_locations, all_boroughs, string_date),
-                client.fetch_data('Evening', all_locations, all_boroughs, string_date)
-            ],
+            client.fetch_data('Morning', all_locations, all_boroughs, string_date),
+            client.fetch_data('Afternoon', all_locations, all_boroughs, string_date),
+            client.fetch_data('Evening', all_locations, all_boroughs, string_date),
             return_exceptions=True
         )
 
