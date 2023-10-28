@@ -7,6 +7,7 @@ from fake_useragent import UserAgent
 
 from typing import Any
 
+
 class AsyncClient:
     def __init__(self, *, user_agent: str = None, httpx_async_client: httpx.AsyncClient = None, proxy: str = None):
         self.user_agent = user_agent or UserAgent().random
