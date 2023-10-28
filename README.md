@@ -43,3 +43,9 @@ if __name__ == '__main__':
 ```
 
 
+# To Do List
+- Duplicate code in check range & day methods
+- Switch to pyproject.toml
+- Better Error handling
+
+
