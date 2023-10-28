@@ -23,8 +23,10 @@ class BaseAsyncClient:
         self.http_client = httpx.AsyncClient(proxies=self.proxy)
 
         # Initialize session token
+        print('Initializing session token...')
         await self.set_user_token()
         await asyncio.sleep(random.randint(3,5))  # Rest
+        print('Initialized session token!')
 
         return self
 
@@ -118,6 +120,7 @@ class AsyncClient(BaseAsyncClient):
             print('\033[38;5;69m' + f'{current_date.strftime("%m/%d/%Y") :-<150}' + '\033[0m')
 
             string_date = current_date.strftime('%m/%d/%Y')
+            
             one_day = await asyncio.gather(
                 self.fetch_data('Morning', all_locations, all_boroughs, string_date),
                 self.fetch_data('Afternoon', all_locations, all_boroughs, string_date),
@@ -125,16 +128,16 @@ class AsyncClient(BaseAsyncClient):
                 return_exceptions=True
             )
 
-            for task_resp in one_day:
-                if isinstance(task_resp, Exception):
-                    print(task_resp)
-                    asyncio.sleep(3)
+            for zone, result in zip(('Morning', 'Afternoon', 'Evening'), one_day):
+                if isinstance(result, Exception):
+                    print(result)
 
                 else:
-                    if self.check_if_there_is_availability(str(task_resp)):
-                        print(task_resp)
+                    if self.check_if_there_is_availability(str(result)):
+                        print(f'{zone}: {result}')
                     else:
-                        print("No Availability")
+                        print(f'{zone}: No Availability')
+
 
             current_date += datetime.timedelta(days=1) 
            
@@ -146,6 +149,7 @@ class AsyncClient(BaseAsyncClient):
         all_locations = ['3201', '3298', '3297', '3300', '3150', '3253', '3289', '3293']
 
         string_date = date.strftime('%m/%d/%Y')
+
         one_day = await asyncio.gather(
             self.fetch_data('Morning', all_locations, all_boroughs, string_date),
             self.fetch_data('Afternoon', all_locations, all_boroughs, string_date),
@@ -153,13 +157,12 @@ class AsyncClient(BaseAsyncClient):
             return_exceptions=True
         )
 
-        for task_resp in one_day:
-            if isinstance(task_resp, Exception):
-                print(task_resp)
-                asyncio.sleep(3)
+        for zone, result in zip(('Morning', 'Afternoon', 'Evening'), one_day):
+            if isinstance(result, Exception):
+                print(result)
 
             else:
-                if self.check_if_there_is_availability(str(task_resp)):
-                    print(task_resp)
+                if self.check_if_there_is_availability(str(result)):
+                    print(f'{zone}: {result}')
                 else:
-                    print("No Availability")
+                    print(f'{zone}: No Availability')
