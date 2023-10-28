@@ -11,15 +11,14 @@ Have any questions or comments? Contact me at [here](https://jacobpadilla.com/co
 Get Availability of all locations & times for a single day:
 ```python
 import asyncio
-import datetime
+from datetime import date
 
 from idnyc_api import AsyncClient
 
 
 async def main():
     async with AsyncClient() as client:
-        date = datetime.date(2023, 10, 29)
-        await client.check_availability_day(date)
+        await client.check_availability_day(date.today())
 
 
 if __name__ == '__main__':
@@ -27,5 +26,20 @@ if __name__ == '__main__':
 ```
 
 Get Availability of all locations & times for a range of days:
+```python
+import asyncio
+from datetime import date
+
+from idnyc_api import AsyncClient
+
+
+async def main():
+    async with AsyncClient() as client:
+        await client.check_availability_range(date(2023, 10, 29), date(2023, 11, 1))
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
 
 
