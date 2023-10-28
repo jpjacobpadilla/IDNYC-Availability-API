@@ -47,4 +47,3 @@ MANIFEST
 
 # env
 .env
-build/lib/idnyc_api
