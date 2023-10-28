@@ -129,9 +129,10 @@ class AsyncClient(BaseAsyncClient):
             )
 
             for zone, result in zip(('Morning', 'Afternoon', 'Evening'), one_day):
-                if isinstance(result, Exception):
+                if isinstance(result, HttpRequestError):
+                    raise result
+                elif isinstance(result, Exception):
                     print(result)
-
                 else:
                     if self.check_if_there_is_availability(str(result)):
                         print(f'{zone}: {result}')
@@ -158,9 +159,10 @@ class AsyncClient(BaseAsyncClient):
         )
 
         for zone, result in zip(('Morning', 'Afternoon', 'Evening'), one_day):
-            if isinstance(result, Exception):
+            if isinstance(result, HttpRequestError):
+                raise result
+            elif isinstance(result, Exception):
                 print(result)
-
             else:
                 if self.check_if_there_is_availability(str(result)):
                     print(f'{zone}: {result}')
