@@ -6,6 +6,9 @@ Currently, due to the scarcity of available appointments, the bot is designed to
 
 Have any questions or comments? Contact me at [here](https://jacobpadilla.com/contact).
 
+## Example Usage:
+
+
 
 
 
