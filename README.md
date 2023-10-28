@@ -42,35 +42,35 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
-# Installation & Instructions
+## Installation & Instructions
 
-1. Download the code:
+Download the code:
 ```bash
 https://github.com/jpjacobpadilla/IDNYC-Availability-API.git
 ```
 
-2. Navigate to the Repository Directory:
+Navigate to the Repository Directory:
 ```
 cd IDNYC-Availability-API
 ```
 
-3. Make some sort of environment:
+Make some sort of environment:
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
-4. Install the package in editable mode so that you can make changes to it:
+Install the package in editable mode so that you can make changes to it:
 ```bash
 pip install -e .
 ```
 
-5. Test out one of the examples (just make sure that the dates are not in the past)
+Test out one of the examples (just make sure that the dates are not in the past)
 ```bash
 python examples/check_day.py 
 ```
 
-# To Do List
+## To Do List
 - Duplicate code in check range & day methods
 - Switch to pyproject.toml
 - Better Error handling
