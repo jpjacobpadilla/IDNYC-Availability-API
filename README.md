@@ -6,6 +6,8 @@ Currently, due to the scarcity of available appointments, the bot is designed to
 
 Have any questions or comments? Contact me at [here](https://jacobpadilla.com/contact).
 
+**Web interface coming soon!**
+
 ## Example Usage:
 
 Get Availability of all locations & times for a single day:
@@ -74,5 +76,3 @@ python examples/check_day.py
 - Duplicate code in check range & day methods
 - Switch to pyproject.toml
 - Better Error handling
-
-
