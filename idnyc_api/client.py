@@ -1,6 +1,6 @@
 import random
 import asyncio
-from datetime import datetime
+from datetime import datetime, timedelta
 import random
 from typing import Any
 
@@ -117,7 +117,7 @@ class AsyncClient(BaseAsyncClient):
 
         current_date = start_date
         while current_date <= end_date:
-            print('\033[38;5;69m' + f'{current_date.strftime("%m/%d/%Y") :-<150}' + '\033[0m')
+            print('\033[38;5;69m' + f'{current_date.strftime("%m/%d/%Y") :-<30}' + '\033[0m')
 
             string_date = current_date.strftime('%m/%d/%Y')
             
@@ -136,10 +136,10 @@ class AsyncClient(BaseAsyncClient):
                     if self.check_if_there_is_availability(str(result)):
                         print(f'{zone}: {result}')
                     else:
-                        print(f'{zone}: No Availability')
+                        print(f'{zone:<10}: No Availability')
 
 
-            current_date += datetime.timedelta(days=1) 
+            current_date += timedelta(days=1) 
            
             if request_rest is not None:
                 await asyncio.sleep(random.uniform(request_rest - request_rest / 2, request_rest + request_rest / 2))
