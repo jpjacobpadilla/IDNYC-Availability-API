@@ -49,12 +49,12 @@ Download the code:
 https://github.com/jpjacobpadilla/IDNYC-Availability-API.git
 ```
 
-Go inside of the cloned repo:
+Navigate to the Repository Directory:
 ```
 cd IDNYC-Availability-API
 ```
 
-Make some sort of Environment:
+Make some sort of environment:
 ```bash
 python -m venv venv
 source venv/bin/activate
@@ -63,6 +63,11 @@ source venv/bin/activate
 Install the package in editable mode so that you can make changes to it:
 ```bash
 pip install -e .
+```
+
+Test out one of the examples (just make sure that the dates are not in the past)
+```bash
+python examples/check_day.py 
 ```
 
 # To Do List
