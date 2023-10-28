@@ -1,13 +1,12 @@
 import asyncio
-import datetime
+from datetime import date
 
 from idnyc_api import AsyncClient
 
 
 async def main():
     async with AsyncClient() as client:
-        date = datetime.date(2023, 10, 29)
-        await client.check_availability_day(date)
+        await client.check_availability_range(date(2023, 10, 29), date(2023, 11, 1))
 
 
 if __name__ == '__main__':
