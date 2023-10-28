@@ -165,4 +165,4 @@ class AsyncClient(BaseAsyncClient):
                 if self.check_if_there_is_availability(str(result)):
                     print(f'{zone}: {result}')
                 else:
-                    print(f'{zone}: No Availability')
+                    print(f'{zone:<10}: No Availability')
