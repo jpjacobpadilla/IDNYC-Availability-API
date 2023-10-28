@@ -42,6 +42,28 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
+# Instsallation
+
+Download the code:
+```bash
+https://github.com/jpjacobpadilla/IDNYC-Availability-API.git
+```
+
+Go inside of the cloned repo:
+```
+cd IDNYC-Availability-API
+```
+
+Make some sort of Environment:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+Install the package in editable mode so that you can make changes to it:
+```bash
+pip install -e .
+```
 
 # To Do List
 - Duplicate code in check range & day methods
