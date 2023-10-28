@@ -27,3 +27,6 @@ venv/
 # Distribution
 *.egg-info/
 *.egg
+
+# env
+.env
