@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
 Download the code:
 ```bash
-https://github.com/jpjacobpadilla/IDNYC-Availability-API.git
+git clone https://github.com/jpjacobpadilla/IDNYC-Availability-API.git
 ```
 
 Navigate to the Repository Directory:
