@@ -76,3 +76,4 @@ python examples/check_day.py
 - Duplicate code in check range & day methods
 - Switch to pyproject.toml
 - Better Error handling
+- range & day currently do not return anything, they only print out their output.
