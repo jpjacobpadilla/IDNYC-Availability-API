@@ -4,9 +4,6 @@ An API to easily check availability for IDNYC appointments across all dates, loc
 
 Currently, due to the scarcity of available appointments, the bot is designed to print the request response whenever it encounters a response that doesn't match the typical format for an unavailable appointment. In most cases, this would indicate that there might be an available slot.
 
-Have any questions or comments? Contact me [here](https://jacobpadilla.com/contact).
-
-**Web interface coming soon!**
 
 ## Example Usage:
 
@@ -77,3 +74,8 @@ python examples/check_day.py
 - Switch to pyproject.toml
 - Better Error handling
 - range & day currently do not return anything, they only print out their output.
+
+
+<br>
+
+Have any questions or comments? Contact me [here](https://jacobpadilla.com/contact).
