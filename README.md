@@ -1,6 +1,6 @@
 # IDNYC-Availability-API
 
-<img align="right" width="150" height="150" src="idnyc-logo.png">
+<img align="right" width="200" height="200" src="idnyc-logo.png">
 
 An API to easily check availability for IDNYC appointments across all dates, locations, and times.
 
