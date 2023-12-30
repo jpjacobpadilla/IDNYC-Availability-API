@@ -1,3 +1,13 @@
+# Deprecation Notice
+
+**As of Dec. 30th 2023, this project is no longer actively maintained.**
+
+## Reason for Deprecation
+
+IDNYC has integrated Google's CAPTCHA system on their website. Consequently, the effort required to maintain this project no longer seems justifiable. However, feel free to use this repository as a starting point, since their underlying API hasn’t changed at the time of writing this.
+
+<hr>
+
 <img align="right" width="200" height="200" src="idnyc-logo.png">
 
 An API to easily check availability for IDNYC appointments across all dates, locations, and times.
@@ -67,14 +77,3 @@ Test out one of the examples (just make sure that the dates are not in the past)
 ```bash
 python examples/check_day.py 
 ```
-
-## To Do List
-- Duplicate code in check range & day methods
-- Switch to pyproject.toml
-- Better Error handling
-- range & day currently do not return anything, they only print out their output.
-
-
-<br>
-
-Have any questions or comments? Contact me [here](https://jacobpadilla.com/contact).
